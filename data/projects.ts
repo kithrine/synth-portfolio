@@ -1,4 +1,6 @@
 import type { StaticImageData } from "next/image";
+import nuzzleImg from "@/public/assets/images/nuzzle-1.png";
+import dreamnetImg from "@/public/assets/images/dreamnet-1.png";
 import leashAndLearnImg from "@/public/assets/images/leashandlearn-1.png";
 import bubbleAiImg from "@/public/assets/images/BubbleAI-1.png";
 import cookieImg from "@/public/assets/images/cookie-1.png";
@@ -19,12 +21,68 @@ export type Project = {
   description: string;
   href: string;
   ariaLabel: string;
-  image: StaticImageData;
-  imageAlt: string;
+  /* Omit image (and set placeholderEmoji) to render a styled placeholder
+     tile until a real screenshot is available. */
+  image?: StaticImageData;
+  imageAlt?: string;
+  placeholderEmoji?: string;
   tags: { label: string; color: TagColor }[];
 };
 
 export const PROJECTS: Project[] = [
+  {
+    title: "Nuzzle",
+    description:
+      "Dog-adoption compatibility platform that scores how well each adoptable dog fits your lifestyle, with confidence-aware matching and AI-written explanations",
+    href: "https://github.com/kithrine/nuzzle",
+    ariaLabel: "Nuzzle project — view on GitHub",
+    image: nuzzleImg,
+    imageAlt: "Nuzzle homepage preview",
+    tags: [
+      { label: "Next.js", color: "pink" },
+      { label: "TypeScript", color: "blue" },
+      { label: "Prisma", color: "vivid-purple" },
+      { label: "PostgreSQL", color: "green" },
+      { label: "Clerk", color: "orange" },
+      { label: "Tailwind", color: "lavender" },
+      { label: "Groq AI", color: "cyan" },
+      { label: "Playwright", color: "yellow" },
+    ],
+  },
+  {
+    title: "Project Nova",
+    description:
+      "Workflow-driven case-management platform for grant-funded transitional employment at animal shelters — currently in the architecture and product-design phase",
+    href: "https://github.com/kithrine/project-nova",
+    ariaLabel: "Project Nova — view on GitHub",
+    placeholderEmoji: "🌟",
+    tags: [
+      { label: "Next.js", color: "pink" },
+      { label: "React", color: "cyan" },
+      { label: "TypeScript", color: "blue" },
+      { label: "System Design", color: "vivid-purple" },
+      { label: "Product Planning", color: "lavender" },
+    ],
+  },
+  {
+    title: "DreamNet",
+    description:
+      "Social dream journal where dreams are shared, rated, and debated — with a star economy, Bayesian leaderboard, and a 3D dream world",
+    href: "https://github.com/kithrine/dreamnet",
+    ariaLabel: "DreamNet project — view on GitHub",
+    image: dreamnetImg,
+    imageAlt: "DreamNet share card with a sleeping star on a cloud",
+    tags: [
+      { label: "Next.js 16", color: "pink" },
+      { label: "TypeScript", color: "blue" },
+      { label: "React", color: "cyan" },
+      { label: "Prisma 7", color: "vivid-purple" },
+      { label: "PostgreSQL", color: "green" },
+      { label: "NextAuth", color: "orange" },
+      { label: "Tailwind", color: "lavender" },
+      { label: "Three.js", color: "yellow" },
+    ],
+  },
   {
     title: "Leash & Learn",
     description:
