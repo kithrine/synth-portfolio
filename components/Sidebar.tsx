@@ -7,7 +7,7 @@ import {
   EmailIcon,
 } from "./icons/SocialIcons";
 import NowPlaying from "./NowPlaying";
-import logoImg from "@/public/assets/images/KT-sidenav-crop.png";
+import logoImg from "@/public/assets/images/sidenav-kit.png";
 
 type SidebarProps = {
   open: boolean;
@@ -28,7 +28,7 @@ export default function Sidebar({
     >
       {/* Logo */}
       <div className="sidebar-logo" aria-label="KT logo">
-        <Image src={logoImg} alt="KT" className="logo-img" sizes="80px" />
+        <Image src={logoImg} alt="KIT" className="logo-img" sizes="80px" />
         <p className="logo-sub">FULLSTACK DEVELOPER</p>
       </div>
 
