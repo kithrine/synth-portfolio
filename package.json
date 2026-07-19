@@ -1,29 +1,30 @@
 {
-  "name": "vanilla-portfolio",
+  "name": "synth-portfolio",
   "version": "1.0.0",
-  "description": "",
-  "main": "script.js",
-  "directories": {
-    "doc": "docs"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "private": true,
+  "description": "Synthwave-themed developer portfolio for Kit Tensfeldt, built with Next.js.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kithrine/vanilla-portfolio.git"
+    "url": "git+https://github.com/kithrine/synth-portfolio.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/kithrine/vanilla-portfolio/issues"
+  "homepage": "https://github.com/kithrine/synth-portfolio#readme",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
   },
-  "homepage": "https://github.com/kithrine/vanilla-portfolio#readme",
+  "dependencies": {
+    "next": "16.2.10",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
   "devDependencies": {
-    "htmlhint": "^1.9.2",
-    "stylelint": "^17.11.0",
-    "stylelint-config-standard": "^40.0.0"
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.10",
+    "typescript": "^5"
   }
 }
