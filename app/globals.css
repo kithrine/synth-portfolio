@@ -1372,3 +1372,56 @@ button, input, optgroup, select, textarea {
 @media (max-width: 480px) {
   .resume-entry { flex-direction: column; gap: 0.5rem; }
 }
+
+/* ─── 17. MUSIC PLAYER (Now Playing widget) ─────────────────── */
+.np-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.np-btn {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  line-height: 1;
+  color: var(--cyan);
+  background: rgba(0, 247, 255, 0.06);
+  border: 1px solid rgba(0, 247, 255, 0.25);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition),
+    text-shadow var(--transition), background var(--transition);
+}
+.np-btn:hover {
+  color: var(--pink);
+  border-color: var(--pink);
+  background: rgba(255, 79, 216, 0.08);
+  text-shadow: var(--glow-pink);
+}
+.np-btn-play { min-width: 42px; }
+
+/* Idle equalizer — bars rest until music plays */
+.eq-idle span {
+  animation: none;
+  transform: scaleY(0.1);
+}
+
+.np-artist-link {
+  color: var(--cyan);
+  text-shadow: var(--glow-cyan);
+}
+
+.np-credit {
+  font-size: 0.5rem;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.np-credit a {
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+.np-credit a:hover { color: var(--cyan); }
