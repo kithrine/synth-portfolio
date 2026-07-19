@@ -1188,3 +1188,187 @@ button, input, optgroup, select, textarea {
 
 /* ─── 15. UTILITIES (replaces Tailwind CDN) ─────────────────── */
 .w-full { width: 100%; }
+
+/* ─── 16. RESUME PAGE ───────────────────────────────────────── */
+.resume-page {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Fixed star backdrop behind the content */
+.resume-stars {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.resume-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.9rem 1.5rem;
+  background: rgba(7, 1, 15, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: var(--border-neon);
+}
+
+.resume-back {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--cyan);
+  letter-spacing: 0.1em;
+  transition: text-shadow var(--transition);
+}
+.resume-back:hover { text-shadow: var(--glow-cyan); }
+
+.resume-main {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Header card */
+.resume-header { text-align: center; }
+
+.resume-name {
+  font-family: var(--font-pixel);
+  font-size: clamp(1rem, 3.5vw, 1.7rem);
+  color: var(--pink);
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  animation: name-glow 3s ease-in-out infinite alternate;
+  margin-bottom: 0.75rem;
+}
+
+.resume-tagline {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--cyan);
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+}
+
+.resume-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  margin-bottom: 1.25rem;
+}
+.resume-links a {
+  color: var(--text-muted);
+  transition: color var(--transition), text-shadow var(--transition);
+}
+.resume-links a:hover {
+  color: var(--cyan);
+  text-shadow: var(--glow-cyan);
+}
+
+.resume-summary {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.8;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Skills */
+.resume-skill-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.resume-skill-group h3 {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--pink);
+  letter-spacing: 0.12em;
+  margin-bottom: 0.4rem;
+}
+.resume-skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+/* Experience / education entries */
+.resume-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.resume-entry {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.resume-entry-body { min-width: 0; }
+
+.resume-period {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.2rem;
+}
+.resume-period.cyan { color: var(--cyan); text-shadow: var(--glow-cyan); }
+.resume-period.pink { color: var(--pink); text-shadow: var(--glow-pink); }
+
+.resume-role {
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  margin-bottom: 0.1rem;
+}
+.resume-org {
+  font-size: 0.8rem;
+  color: var(--cyan);
+  margin-bottom: 0.5rem;
+}
+.resume-note {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.resume-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.resume-bullets li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+.resume-bullets li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--pink);
+}
+
+.resume-footer {
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .resume-entry { flex-direction: column; gap: 0.5rem; }
+}
