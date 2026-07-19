@@ -24,7 +24,16 @@ export default function Projects() {
         </div>
         <div className="projects-grid">
           {PROJECTS.map(
-            ({ title, description, href, ariaLabel, image, imageAlt, tags }) => (
+            ({
+              title,
+              description,
+              href,
+              ariaLabel,
+              image,
+              imageAlt,
+              placeholderEmoji,
+              tags,
+            }) => (
               <a
                 className="project-card"
                 href={href}
@@ -33,12 +42,20 @@ export default function Projects() {
                 aria-label={ariaLabel}
                 key={title}
               >
-                <div className="project-img-wrap">
-                  <Image
-                    src={image}
-                    alt={imageAlt}
-                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-                  />
+                <div
+                  className={`project-img-wrap${image ? "" : " img-placeholder"}`}
+                >
+                  {image ? (
+                    <Image
+                      src={image}
+                      alt={imageAlt ?? ""}
+                      sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+                    />
+                  ) : (
+                    <span className="proj-placeholder-emoji" aria-hidden="true">
+                      {placeholderEmoji}
+                    </span>
+                  )}
                 </div>
                 <div className="project-info">
                   <h3 className="project-title">{title}</h3>

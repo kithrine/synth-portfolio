@@ -854,6 +854,8 @@ button, input, optgroup, select, textarea {
 .proj-placeholder-1::after { content: '🐾'; font-size: 2.5rem; }
 .proj-placeholder-2::after { content: '🤖'; font-size: 2.5rem; }
 .proj-placeholder-3::after { content: '🍪'; font-size: 2.5rem; }
+/* Emoji tile for projects that don't have a screenshot yet */
+.proj-placeholder-emoji { font-size: 2.5rem; }
 
 .project-info { padding: 0.85rem; }
 
