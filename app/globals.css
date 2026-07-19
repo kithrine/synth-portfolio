@@ -325,23 +325,25 @@ ul  { list-style: none; }
   justify-content: center;
   transition: color var(--transition), filter var(--transition), transform var(--transition);
 }
+/* Colors keyed by class (not :nth-child) so icons can be removed or
+   re-added without shifting every color after them. */
 /* GitHub — purple */
-.sidebar-socials a:nth-child(1) {
+.sidebar-socials .social-github {
   color: var(--purple);
   filter: drop-shadow(0 0 4px rgba(139,92,246,0.6));
 }
 /* LinkedIn — blue */
-.sidebar-socials a:nth-child(2) {
+.sidebar-socials .social-linkedin {
   color: var(--blue);
   filter: drop-shadow(0 0 4px rgba(96,165,250,0.6));
 }
 /* Instagram — pink */
-.sidebar-socials a:nth-child(3) {
+.sidebar-socials .social-instagram {
   color: var(--pink);
   filter: drop-shadow(0 0 4px rgba(255,79,216,0.6));
 }
 /* Gmail — yellow */
-.sidebar-socials a:nth-child(4) {
+.sidebar-socials .social-email {
   color: var(--yellow);
   filter: drop-shadow(0 0 4px rgba(251,191,36,0.6));
 }
