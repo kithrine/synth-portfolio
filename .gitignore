@@ -1,6 +1,19 @@
 # Dependencies
 node_modules/
 
+# Next.js
+/.next/
+/out/
+/build
+next-env.d.ts
+*.tsbuildinfo
+
+# Vercel
+.vercel
+
+# Testing
+/coverage
+
 # OS
 .DS_Store
 Thumbs.db
@@ -17,3 +30,6 @@ npm-debug.log*
 # Environment
 .env
 .env.local
+
+# Local Claude Code session config
+.claude/
