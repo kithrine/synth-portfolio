@@ -12,11 +12,16 @@ const inter = Inter({
   display: "swap",
 });
 
+/* adjustFontFallback: false on the two display fonts so glyphs they
+   lack (→ ↓ ✦) fall through to the system monospace font, exactly as
+   the vanilla font stacks did — the synthetic Arial-metric fallback
+   would render those glyphs with different widths. */
 const pressStart2P = Press_Start_2P({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-press-start-2p",
   display: "swap",
+  adjustFontFallback: false,
 });
 
 const shareTechMono = Share_Tech_Mono({
@@ -24,6 +29,7 @@ const shareTechMono = Share_Tech_Mono({
   weight: "400",
   variable: "--font-share-tech-mono",
   display: "swap",
+  adjustFontFallback: false,
 });
 
 export const metadata: Metadata = {

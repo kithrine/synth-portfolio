@@ -46,9 +46,14 @@
   --sidebar-w:     220px;
   --section-gap:   2.5rem;
 
+  /* next/font declares its @font-face under the real family names, so
+     these vanilla token values resolve to the self-hosted fonts. The
+     pixel/mono tokens deliberately skip next/font's synthetic fallback
+     families so glyphs the fonts lack (→ ↓ ✦) fall through to the
+     system monospace font, exactly as the vanilla stacks did. */
   --font-logo:     'Permanent Marker', cursive;
-  --font-pixel:    var(--font-press-start-2p), 'Press Start 2P', monospace;
-  --font-mono:     var(--font-share-tech-mono), 'Share Tech Mono', monospace;
+  --font-pixel:    'Press Start 2P', monospace;
+  --font-mono:     'Share Tech Mono', monospace;
   --font-body:     var(--font-inter), 'Inter', sans-serif;
 
   --glow-pink:     0 0 8px #ff4fd8, 0 0 24px #ff4fd866, 0 0 48px #ff4fd833;
@@ -100,6 +105,24 @@ ul  { list-style: none; }
   padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0,0,0,0);
   white-space: nowrap; border: 0;
+}
+
+/* Tailwind CDN preflight equivalents.
+   The vanilla site loaded the Tailwind browser build, whose preflight
+   reset shaped the rendering (headings at body weight, form controls
+   inheriting the page font). Replicated here so dropping the CDN does
+   not change how the page looks. */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+button, input, optgroup, select, textarea {
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  border-radius: 0;
+  background-color: transparent;
+  opacity: 1;
 }
 
 /* ─── 3. TYPOGRAPHY HELPERS ─────────────────────────────────── */

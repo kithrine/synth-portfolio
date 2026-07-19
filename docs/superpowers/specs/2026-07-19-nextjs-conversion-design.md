@@ -122,3 +122,32 @@ No `vercel.json` needed (auto-detect), no env vars. Vercel CLI/MCP auth unavaila
 - Update `data/projects.ts` with recent projects.
 - `app/resume/page.tsx` visual resume reusing `data/experience.ts`, download button → existing PDF URL.
 - Branded favicon; possible `.now-playing-sub` sync.
+
+## Implementation notes (deltas discovered during verification)
+
+Verification ran as a 9-agent code-fidelity review plus a computed-style/layout
+probe diff of the vanilla and Next.js sites side by side, then interactive
+checks in a real browser. Discoveries beyond the planned edit list:
+
+1. **Tailwind preflight was load-bearing.** The vanilla page rendered with the
+   Tailwind CDN's preflight reset: headings at body weight (`h1-h6
+   { font-size/font-weight: inherit }`) and form controls inheriting
+   `font`/`letter-spacing`/`color`. Without it, headings faux-bolded (700) and
+   inputs shrank 6px. Equivalent rules now live in globals.css §2.
+2. **Font fallback glyphs.** next/font's synthetic fallback ("Share Tech Mono
+   Fallback", Arial-metric) rendered glyphs the webfonts lack (→ ↓ ✦) ~2×
+   wider than vanilla's system-monospace fallback, shifting button widths 7px.
+   `adjustFontFallback: false` is ignored by the Turbopack font loader, but
+   Next 16 declares @font-face under real family names, so the pixel/mono
+   tokens now use the plain vanilla stacks ('Share Tech Mono', monospace) —
+   verified identical glyph metrics in dev and prod builds.
+3. **Social colors keyed by class.** Hiding Instagram would have shifted the
+   `:nth-child`-based colors (email would turn pink); selectors are now
+   `.social-github` / `.social-linkedin` / `.social-instagram` / `.social-email`.
+4. **devicon-base.css instead of devicon.min.css** — min.css ships a UTF-8 BOM
+   that Turbopack's CSS parser rejects; base.css has the same @font-face and
+   glyph classes without the `.colored` variants (unused).
+5. **Status-timer improvement kept.** Vanilla's form status stacked 5s
+   timeouts, so a rapid resubmit's message could be blanked early by the prior
+   timer; the port cancels the prior timer (newest message always shows 5s).
+   Confirmed as the only intentional behavior divergence by the review.
