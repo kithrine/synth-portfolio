@@ -20,7 +20,13 @@ const STAR_COUNT = 120;
  * Math.random(). Visually identical to the vanilla site, which also
  * populated the field only after DOMContentLoaded.
  */
-export default function StarField() {
+export default function StarField({
+  /* Hero keeps stars in the upper 55% (the sky above the skyline);
+     full-viewport backdrops pass 100. */
+  yMax = 55,
+}: {
+  yMax?: number;
+}) {
   const [stars, setStars] = useState<Star[]>([]);
 
   useEffect(() => {
@@ -31,13 +37,13 @@ export default function StarField() {
       Array.from({ length: STAR_COUNT }, () => ({
         size: Math.random() * 2.5 + 0.5,
         x: Math.random() * 100,
-        y: Math.random() * 55, // only upper half (sky area)
+        y: Math.random() * yMax,
         dur: `${(Math.random() * 4 + 2).toFixed(1)}s`,
         delay: `${(Math.random() * 5).toFixed(1)}s`,
         opacity: Math.random() * 0.6 + 0.2,
       })),
     );
-  }, []);
+  }, [yMax]);
 
   return (
     <div className="stars" id="stars">
