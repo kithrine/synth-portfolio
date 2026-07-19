@@ -1,6 +1,8 @@
+import { Fragment } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { NAV_ITEMS, type SectionId } from "@/data/navigation";
-import { NAV_ICONS } from "./icons/NavIcons";
+import { NAV_ICONS, ResumeIcon } from "./icons/NavIcons";
 import {
   GitHubIcon,
   LinkedInIcon,
@@ -38,19 +40,37 @@ export default function Sidebar({
           {NAV_ITEMS.map(({ id, label }) => {
             const Icon = NAV_ICONS[id];
             return (
-              <li key={id}>
-                <a
-                  href={`#${id}`}
-                  className={`nav-link${activeSection === id ? " active" : ""}`}
-                  data-section={id}
-                  onClick={onNavClick}
-                >
-                  <span className="nav-icon" aria-hidden="true">
-                    <Icon />
-                  </span>
-                  {label}
-                </a>
-              </li>
+              <Fragment key={id}>
+                <li>
+                  <a
+                    href={`#${id}`}
+                    className={`nav-link${activeSection === id ? " active" : ""}`}
+                    data-section={id}
+                    onClick={onNavClick}
+                  >
+                    <span className="nav-icon" aria-hidden="true">
+                      <Icon />
+                    </span>
+                    {label}
+                  </a>
+                </li>
+                {/* RESUME routes to its own page, so it lives outside the
+                    scroll-spy sections. */}
+                {id === "experience" && (
+                  <li>
+                    <Link
+                      href="/resume"
+                      className="nav-link"
+                      onClick={onNavClick}
+                    >
+                      <span className="nav-icon" aria-hidden="true">
+                        <ResumeIcon />
+                      </span>
+                      RESUME
+                    </Link>
+                  </li>
+                )}
+              </Fragment>
             );
           })}
         </ul>

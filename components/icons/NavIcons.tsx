@@ -51,7 +51,8 @@ function SkillsIcon() {
   );
 }
 
-function ResumeIcon() {
+/* Used by the RESUME page link in Sidebar.tsx (a route, not a section). */
+export function ResumeIcon() {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -65,6 +66,22 @@ function ResumeIcon() {
       <polyline points="14 2 14 8 20 8" />
       <line x1="8" y1="13" x2="16" y2="13" />
       <line x1="8" y1="17" x2="16" y2="17" />
+    </svg>
+  );
+}
+
+function BriefcaseIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect x="2" y="7" width="20" height="13" rx="2" />
+      <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
     </svg>
   );
 }
@@ -107,7 +124,7 @@ export const NAV_ICONS: Record<SectionId, () => React.JSX.Element> = {
   home: HomeIcon,
   about: AboutIcon,
   skills: SkillsIcon,
-  experience: ResumeIcon,
+  experience: BriefcaseIcon,
   projects: ProjectsIcon,
   contact: ContactIcon,
 };
