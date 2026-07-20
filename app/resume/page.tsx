@@ -10,7 +10,7 @@ import {
 } from "@/data/resume";
 
 export const metadata: Metadata = {
-  title: "Resume — KT",
+  title: "Resume — KIT",
   description:
     "Katherine Tensfeldt — Fullstack Developer. Experience, skills, and education.",
 };

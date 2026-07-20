@@ -40,14 +40,14 @@ export default function Hero() {
             />
           </h1>
           <h2 className="hero-title glow-cyan">
-            AI ENTHUSIAST &amp;
+            AI COLLABORATOR &amp;
             <br />
             FULL STACK DEVELOPER
           </h2>
           <p className="hero-desc">
             I build engaging digital experiences
             <br />
-            with a love for code, design, and all things retro.
+            with a love for code and design.
           </p>
           <div className="hero-cta">
             <a href="#projects" className="btn btn-outline">
