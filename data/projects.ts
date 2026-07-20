@@ -1,5 +1,6 @@
 import type { StaticImageData } from "next/image";
 import nuzzleImg from "@/public/assets/images/nuzzle-1.png";
+import projectNovaImg from "@/public/assets/images/project-nova-1.png";
 import dreamnetImg from "@/public/assets/images/dreamnet-1.png";
 import leashAndLearnImg from "@/public/assets/images/leashandlearn-1.png";
 import bubbleAiImg from "@/public/assets/images/BubbleAI-1.png";
@@ -52,16 +53,20 @@ export const PROJECTS: Project[] = [
   {
     title: "Project Nova",
     description:
-      "Workflow-driven case-management platform for grant-funded transitional employment at animal shelters — currently in the architecture and product-design phase",
+      "Workflow-driven case-management platform guiding people returning from incarceration through paid shelter-work placements — from application to permanent employment",
     href: "https://github.com/kithrine/project-nova",
     ariaLabel: "Project Nova — view on GitHub",
-    placeholderEmoji: "🌟",
+    image: projectNovaImg,
+    imageAlt: "Project Nova homepage preview",
     tags: [
-      { label: "Next.js", color: "pink" },
-      { label: "React", color: "cyan" },
+      { label: "Next.js 16", color: "pink" },
       { label: "TypeScript", color: "blue" },
-      { label: "System Design", color: "vivid-purple" },
-      { label: "Product Planning", color: "lavender" },
+      { label: "React", color: "cyan" },
+      { label: "Prisma", color: "vivid-purple" },
+      { label: "PostgreSQL", color: "green" },
+      { label: "Clerk", color: "orange" },
+      { label: "Tailwind 4", color: "lavender" },
+      { label: "Zod", color: "yellow" },
     ],
   },
   {
