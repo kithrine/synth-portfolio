@@ -33,9 +33,9 @@ const shareTechMono = Share_Tech_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "KT — Developer & Designer",
+  title: "KIT — Developer & Designer",
   description:
-    "Katherine Tensfeldt — AI Enthusiast & Full Stack Developer. Retro-futuristic developer portfolio.",
+    "Katherine Tensfeldt — AI Collaborator & Full Stack Developer. Retro-futuristic developer portfolio.",
 };
 
 export default function RootLayout({

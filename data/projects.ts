@@ -1,7 +1,8 @@
 import type { StaticImageData } from "next/image";
 import nuzzleImg from "@/public/assets/images/nuzzle-1.png";
 import projectNovaImg from "@/public/assets/images/project-nova-1.png";
-import dreamnetImg from "@/public/assets/images/dreamnet-1.png";
+import dreamnetImg from "@/public/assets/images/dreamnet-2.png";
+import aogImg from "@/public/assets/images/aog-1.png";
 import leashAndLearnImg from "@/public/assets/images/leashandlearn-1.png";
 import bubbleAiImg from "@/public/assets/images/BubbleAI-1.png";
 import cookieImg from "@/public/assets/images/cookie-1.png";
@@ -32,6 +33,27 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
+    title: "Project Nova",
+    description:
+      "Workflow-driven case-management platform guiding people returning from incarceration through paid shelter-work placements — from application to permanent employment",
+    href: "https://github.com/kithrine/project-nova",
+    ariaLabel: "Project Nova — view on GitHub",
+    image: projectNovaImg,
+    imageAlt: "Project Nova homepage preview",
+    tags: [
+      { label: "Next.js 16", color: "pink" },
+      { label: "TypeScript", color: "blue" },
+      { label: "React", color: "cyan" },
+      { label: "Prisma", color: "vivid-purple" },
+      { label: "PostgreSQL", color: "green" },
+      { label: "Clerk", color: "orange" },
+      { label: "Tailwind 4", color: "lavender" },
+      { label: "Zod", color: "yellow" },
+      { label: "Vitest", color: "yellow" },
+      { label: "Playwright", color: "purple" },
+    ],
+  },
+  {
     title: "Nuzzle",
     description:
       "Dog-adoption compatibility platform that scores how well each adoptable dog fits your lifestyle, with confidence-aware matching and AI-written explanations",
@@ -51,32 +73,13 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    title: "Project Nova",
-    description:
-      "Workflow-driven case-management platform guiding people returning from incarceration through paid shelter-work placements — from application to permanent employment",
-    href: "https://github.com/kithrine/project-nova",
-    ariaLabel: "Project Nova — view on GitHub",
-    image: projectNovaImg,
-    imageAlt: "Project Nova homepage preview",
-    tags: [
-      { label: "Next.js 16", color: "pink" },
-      { label: "TypeScript", color: "blue" },
-      { label: "React", color: "cyan" },
-      { label: "Prisma", color: "vivid-purple" },
-      { label: "PostgreSQL", color: "green" },
-      { label: "Clerk", color: "orange" },
-      { label: "Tailwind 4", color: "lavender" },
-      { label: "Zod", color: "yellow" },
-    ],
-  },
-  {
     title: "DreamNet",
     description:
       "Social dream journal where dreams are shared, rated, and debated — with a star economy, Bayesian leaderboard, and a 3D dream world",
     href: "https://github.com/kithrine/dreamnet",
     ariaLabel: "DreamNet project — view on GitHub",
     image: dreamnetImg,
-    imageAlt: "DreamNet share card with a sleeping star on a cloud",
+    imageAlt: "DreamNet dashboard preview",
     tags: [
       { label: "Next.js 16", color: "pink" },
       { label: "TypeScript", color: "blue" },
@@ -86,6 +89,23 @@ export const PROJECTS: Project[] = [
       { label: "NextAuth", color: "orange" },
       { label: "Tailwind", color: "lavender" },
       { label: "Three.js", color: "yellow" },
+    ],
+  },
+  {
+    title: "AOG Necrology",
+    description:
+      "Searchable memorial record of West Point graduates, 1870–1941 — an AI-assisted pipeline that transcribes the printed annual reports into a database, print-ready PDFs, and a static search site",
+    href: "https://github.com/melonmelonz/aog-necrology",
+    ariaLabel: "AOG Necrology project — view on GitHub",
+    image: aogImg,
+    imageAlt: "AOG Necrology memorial site preview",
+    tags: [
+      { label: "Next.js", color: "pink" },
+      { label: "TypeScript", color: "blue" },
+      { label: "Python", color: "green" },
+      { label: "SQLite", color: "cyan" },
+      { label: "Claude", color: "orange" },
+      { label: "GitHub Pages", color: "lavender" },
     ],
   },
   {
