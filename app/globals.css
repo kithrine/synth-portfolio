@@ -651,6 +651,13 @@ button, input, optgroup, select, textarea {
   line-height: 1;
 }
 
+/* Inline-SVG skill logos (for tools devicon doesn't cover) */
+.skill-icon svg {
+  width: 2.6rem;
+  height: 2.6rem;
+  fill: currentColor;
+}
+
 .skill-icon.cyan     { color: var(--cyan);     border-color: var(--cyan);     background: rgba(0,247,255,0.06); }
 .skill-icon.blue     { color: var(--blue);     border-color: var(--blue);     background: rgba(96,165,250,0.06); }
 .skill-icon.yellow   { color: var(--yellow);   border-color: var(--yellow);   background: rgba(251,191,36,0.06); }
@@ -1183,7 +1190,8 @@ button, input, optgroup, select, textarea {
 @media (max-width: 480px) {
   .hero-name { font-size: clamp(3rem, 18vw, 5rem); }
   .projects-grid { grid-template-columns: 1fr; }
-  .skills-grid { grid-template-columns: repeat(4, 1fr); }
+  /* 3 per row — the 80px icon tiles overflow at 4-up on phones */
+  .skills-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* ─── 15. UTILITIES (replaces Tailwind CDN) ─────────────────── */

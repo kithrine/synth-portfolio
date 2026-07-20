@@ -1,6 +1,11 @@
+import type { JSX } from "react";
+import { ClaudeIcon } from "@/components/icons/SkillIcons";
+
 export type Skill = {
   name: string;
-  deviconClass: string;
+  /* Either a devicon glyph class or a custom inline-SVG component */
+  deviconClass?: string;
+  Icon?: () => JSX.Element;
   /* Matches a .skill-icon color class in globals.css */
   color:
     | "cyan"
@@ -29,4 +34,5 @@ export const SKILLS: Skill[] = [
   { name: "Next.js", deviconClass: "devicon-nextjs-plain", color: "purple" },
   { name: "Python", deviconClass: "devicon-python-plain", color: "green" },
   { name: "Prisma", deviconClass: "devicon-prisma-original", color: "cyan" },
+  { name: "Claude", Icon: ClaudeIcon, color: "orange" },
 ];
