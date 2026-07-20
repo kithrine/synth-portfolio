@@ -12,10 +12,10 @@ export default function Skills() {
           SKILLS
         </h2>
         <div className="skills-grid" role="list">
-          {SKILLS.map(({ name, deviconClass, color }) => (
+          {SKILLS.map(({ name, deviconClass, Icon, color }) => (
             <div className="skill-item" role="listitem" key={name}>
               <div className={`skill-icon ${color}`}>
-                <i className={deviconClass}></i>
+                {Icon ? <Icon /> : <i className={deviconClass}></i>}
               </div>
               <span>{name}</span>
             </div>
