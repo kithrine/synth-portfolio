@@ -55,8 +55,8 @@ export default function Sidebar({
                   </a>
                 </li>
                 {/* RESUME routes to its own page, so it lives outside the
-                    scroll-spy sections. */}
-                {id === "experience" && (
+                    scroll-spy sections — pinned at the very bottom. */}
+                {id === "contact" && (
                   <li>
                     <Link
                       href="/resume"
