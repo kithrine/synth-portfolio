@@ -39,7 +39,6 @@ export const RESUME_SKILL_GROUPS: SkillGroup[] = [
       "Next.js",
       "Vite",
       "Three.js",
-      "React Three Fiber",
       "Recharts",
       "Phaser",
     ],
@@ -69,6 +68,7 @@ export const RESUME_SKILL_GROUPS: SkillGroup[] = [
     category: "AI",
     skills: [
       "Claude Code",
+      "Codex",
       "Prompt Engineering",
       "RAG",
       "Groq",
@@ -84,7 +84,7 @@ export const RESUME_SKILL_GROUPS: SkillGroup[] = [
       "Playwright",
       "Jest",
       "React Testing Library",
-      "axe-core",
+      "TDD",
     ],
   },
   {
