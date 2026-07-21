@@ -36,7 +36,23 @@ The page content is data-driven — most updates are single-file edits:
 | Project cards | `data/projects.ts` |
 | Nav sections + "Now Playing" tracks | `data/navigation.ts`, `data/tracks.ts` |
 | Social links | `components/Sidebar.tsx` |
-| Resume PDF | `public/assets/docs/Tensfeldt_Resume_Public.pdf` |
+| Resume content (styled page + PDF) | `data/resume.ts` |
+
+### Regenerating the resume PDF
+
+The downloadable PDF is generated from the hidden `/resume/print` route,
+which renders the same `data/resume.ts` content as the styled `/resume`
+page. After editing resume content, regenerate it with the dev server
+running:
+
+```powershell
+& "C:\Program Files\Google\Chrome\Application\chrome.exe" --headless `
+  --no-pdf-header-footer `
+  --print-to-pdf="public\assets\docs\Tensfeldt_Resume_Public.pdf" `
+  --virtual-time-budget=10000 "http://localhost:3000/resume/print"
+```
+
+Then commit the updated PDF alongside the data change.
 
 ## Deploying to Vercel
 

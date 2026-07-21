@@ -4,6 +4,7 @@ import StarField from "@/components/StarField";
 import {
   RESUME_SUMMARY,
   RESUME_LINKS,
+  RESUME_LOCATION,
   RESUME_SKILL_GROUPS,
   RESUME_EXPERIENCE,
   RESUME_EDUCATION,
@@ -40,7 +41,7 @@ export default function ResumePage() {
         <section className="section-card resume-header" aria-label="Contact">
           <h1 className="resume-name glow-pink">KATHERINE TENSFELDT</h1>
           <p className="resume-tagline">
-            FULLSTACK DEVELOPER ✦ GREATER PHOENIX AREA
+            FULLSTACK DEVELOPER ✦ {RESUME_LOCATION.toUpperCase()}
           </p>
           <ul className="resume-links" role="list">
             {RESUME_LINKS.map(({ label, href }) => (

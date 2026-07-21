@@ -1,0 +1,106 @@
+/* Plain, ATS-friendly print document. Deliberately zero synthwave:
+   black text on white, standard fonts, no images or glows. */
+
+.doc {
+  background: #fff;
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.45;
+  max-width: 7.6in;
+  margin: 0 auto;
+  padding: 0.4in 0.25in 0.6in;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 14pt;
+}
+
+.name {
+  font-size: 21pt;
+  font-weight: 700;
+  letter-spacing: 0.5pt;
+  margin-bottom: 3pt;
+}
+
+.contactLine {
+  font-size: 9.5pt;
+  color: #333;
+}
+.contactLine a {
+  color: #333;
+  text-decoration: none;
+}
+.contactSep {
+  margin: 0 5pt;
+  color: #999;
+}
+
+.summary {
+  margin-bottom: 12pt;
+}
+
+.sectionTitle {
+  font-size: 12pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1pt;
+  border-bottom: 1.2pt solid #111;
+  padding-bottom: 2pt;
+  margin: 12pt 0 7pt;
+}
+
+.skillRow {
+  margin-bottom: 3pt;
+}
+.skillCategory {
+  font-weight: 700;
+}
+
+.entry {
+  margin-bottom: 10pt;
+  break-inside: avoid;
+}
+
+.entryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8pt;
+  flex-wrap: wrap;
+}
+.entryRole {
+  font-size: 11pt;
+  font-weight: 700;
+}
+.entryOrg {
+  font-weight: 400;
+  color: #333;
+}
+.entryPeriod {
+  font-size: 9.5pt;
+  font-weight: 700;
+  color: #333;
+  white-space: nowrap;
+}
+
+.bullets {
+  margin: 3pt 0 0;
+  padding-left: 16pt;
+  list-style: disc;
+}
+.bullets li {
+  margin-bottom: 2.5pt;
+}
+
+.eduNote {
+  font-size: 9.5pt;
+  color: #444;
+  font-style: italic;
+}
+
+@page {
+  margin: 0.45in 0.5in;
+}
