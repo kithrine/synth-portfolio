@@ -21,7 +21,10 @@ export const RESUME_LINKS = [
     label: "linkedin.com/in/kithrine",
     href: "https://www.linkedin.com/in/kithrine",
   },
+  { label: "kithrine.vercel.app", href: "https://kithrine.vercel.app" },
 ] as const;
+
+export const RESUME_LOCATION = "Greater Denver Area";
 
 export type SkillGroup = { category: string; skills: string[] };
 
@@ -35,6 +38,8 @@ export const RESUME_SKILL_GROUPS: SkillGroup[] = [
       "Redux Toolkit",
       "Next.js",
       "Vite",
+      "Three.js",
+      "React Three Fiber",
       "Recharts",
       "Phaser",
     ],
@@ -45,10 +50,12 @@ export const RESUME_SKILL_GROUPS: SkillGroup[] = [
       "Node.js",
       "Express",
       "Python",
+      "Prisma",
+      "PostgreSQL",
       "Mongoose",
       "MongoDB",
-      "PostgreSQL",
-      "Prisma",
+      "SQLite",
+      "Zod",
       "Passport",
       "Socket.io",
       "Faker.js",
@@ -60,7 +67,36 @@ export const RESUME_SKILL_GROUPS: SkillGroup[] = [
   },
   {
     category: "AI",
-    skills: ["HuggingFace", "Ollama", "MstyStudio", "Groq", "Prompt Engineering"],
+    skills: [
+      "Claude Code",
+      "Prompt Engineering",
+      "RAG",
+      "Groq",
+      "Ollama",
+      "HuggingFace",
+      "MstyStudio",
+    ],
+  },
+  {
+    category: "TESTING",
+    skills: [
+      "Vitest",
+      "Playwright",
+      "Jest",
+      "React Testing Library",
+      "axe-core",
+    ],
+  },
+  {
+    category: "AUTH & PLATFORM",
+    skills: [
+      "Clerk",
+      "NextAuth",
+      "Neon",
+      "Vercel",
+      "Vercel Blob",
+      "GitHub Actions",
+    ],
   },
   { category: "VERSION CONTROL", skills: ["Git", "GitLab", "GitHub"] },
   { category: "WORKFLOW", skills: ["Agile", "Scrum", "GitLab Issues"] },
@@ -82,7 +118,11 @@ export const RESUME_EXPERIENCE: ResumeEntry[] = [
     role: "Student Developer",
     org: "Next Chapter Coding Bootcamp",
     bullets: [
-      "AI-driven fullstack bootcamp. Building with React, Python, Node.js, and PostgreSQL while integrating prompt engineering concepts.",
+      "Building production applications in an AI-driven fullstack bootcamp centered on modern, AI-assisted engineering workflows.",
+      "Shipped Nuzzle (nuzzledogadoption.us) — dog-adoption compatibility platform with a deterministic 100-point matching engine, confidence scoring, and AI-written explanations. Next.js, TypeScript, Prisma, Neon PostgreSQL, Clerk, Groq; tested with Vitest and Playwright.",
+      "Shipped Project Nova (project-nova.app) — workflow-driven case-management platform for grant-funded transitional employment, with four role-scoped experiences, 800+ tests, automated WCAG AA contrast gates, and CI quality gates with auto-merge.",
+      "Co-built DreamNet on a two-person team — social dream journal with a star economy, Bayesian leaderboard, and a Three.js 3D world; built the full main app (NextAuth, Prisma 7, PostgreSQL) against an API contract agreed up front.",
+      "Built AOG Necrology — AI-assisted transcription pipeline (Python + Claude Code agents) that turned 70 years of scanned USMA memorial reports into a searchable database and static Next.js site.",
     ],
     Illustration: RobotIllustration,
   },
