@@ -99,7 +99,7 @@ export const RESUME_SKILL_GROUPS: SkillGroup[] = [
     ],
   },
   { category: "VERSION CONTROL", skills: ["Git", "GitLab", "GitHub"] },
-  { category: "WORKFLOW", skills: ["Agile", "Scrum", "GitLab Issues"] },
+  { category: "WORKFLOW", skills: ["Agile", "Scrum", "CI/CD", "GitLab Issues"] },
 ];
 
 export type ResumeEntry = {
