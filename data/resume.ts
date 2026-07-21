@@ -13,13 +13,14 @@ import {
 export const RESUME_SUMMARY =
   "Fullstack developer that is truly driven by creating interactive, user-centered digital experiences. I love blending beautiful design with a solid back-end structure, while always keeping state management in mind. Seeking a challenging role where I can deepen my knowledge, expand my skills, and learn new technologies while contributing to a team.";
 
+/* No email here on purpose — the public PDF resume doesn't list one
+   either; people reach Kit through the site's contact form. */
 export const RESUME_LINKS = [
   { label: "github.com/kithrine", href: "https://github.com/kithrine" },
   {
     label: "linkedin.com/in/kithrine",
     href: "https://www.linkedin.com/in/kithrine",
   },
-  { label: "kittensfeldt2@gmail.com", href: "mailto:kittensfeldt2@gmail.com" },
 ] as const;
 
 export type SkillGroup = { category: string; skills: string[] };

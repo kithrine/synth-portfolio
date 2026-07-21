@@ -350,10 +350,10 @@ button, input, optgroup, select, textarea {
 }
 /* Colors keyed by class (not :nth-child) so icons can be removed or
    re-added without shifting every color after them. */
-/* GitHub — purple */
+/* GitHub — neon pink */
 .sidebar-socials .social-github {
-  color: var(--purple);
-  filter: drop-shadow(0 0 4px rgba(139,92,246,0.6));
+  color: var(--pink);
+  filter: drop-shadow(0 0 4px rgba(255,79,216,0.6));
 }
 /* LinkedIn — blue */
 .sidebar-socials .social-linkedin {

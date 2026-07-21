@@ -3,11 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { NAV_ITEMS, type SectionId } from "@/data/navigation";
 import { NAV_ICONS, ResumeIcon } from "./icons/NavIcons";
-import {
-  GitHubIcon,
-  LinkedInIcon,
-  EmailIcon,
-} from "./icons/SocialIcons";
+import { GitHubIcon, LinkedInIcon } from "./icons/SocialIcons";
 import NowPlaying from "./NowPlaying";
 import logoImg from "@/public/assets/images/sidenav-kit.png";
 
@@ -110,13 +106,17 @@ export default function Sidebar({
           <InstagramIcon />
         </a>
         */}
+        {/* Email hidden — visitors reach Kit through the contact form
+            instead (keeps the address out of the page source). To bring
+            the icon back, fill in the mailto address and uncomment.
         <a
-          href="mailto:kittensfeldt2@gmail.com"
+          href="mailto:"
           aria-label="Email"
           className="social-email"
         >
           <EmailIcon />
         </a>
+        */}
       </div>
 
       {/* Animated status block */}
