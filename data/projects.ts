@@ -92,13 +92,13 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    title: "AOG Necrology",
+    title: "AOG Memorial Articles",
     description:
       "Searchable memorial record of West Point graduates, 1870–1941 — an AI-assisted pipeline that transcribes the printed annual reports into a database, print-ready PDFs, and a static search site",
     href: "https://github.com/melonmelonz/aog-necrology",
-    ariaLabel: "AOG Necrology project — view on GitHub",
+    ariaLabel: "AOG Memorial Articles project — view on GitHub",
     image: aogImg,
-    imageAlt: "AOG Necrology memorial site preview",
+    imageAlt: "AOG Memorial Articles site preview",
     tags: [
       { label: "Next.js", color: "pink" },
       { label: "TypeScript", color: "blue" },

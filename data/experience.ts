@@ -23,7 +23,7 @@ export const EXPERIENCE: ExperienceItem[] = [
     role: "Next Chapter Coding Bootcamp",
     company: "Student Developer",
     description:
-      "AI-driven fullstack bootcamp. Shipped production apps — Nuzzle, Project Nova, DreamNet, and AOG Necrology — with Next.js, TypeScript, Prisma, and AI-assisted workflows.",
+      "AI-driven fullstack bootcamp. Shipped production apps — Nuzzle, Project Nova, DreamNet, and AOG Memorial Articles — with Next.js, TypeScript, Prisma, and AI-assisted workflows.",
     Illustration: RobotIllustration,
   },
   {
