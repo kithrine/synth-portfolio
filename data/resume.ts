@@ -122,7 +122,7 @@ export const RESUME_EXPERIENCE: ResumeEntry[] = [
       "Shipped Nuzzle (nuzzledogadoption.us) — dog-adoption compatibility platform with a deterministic 100-point matching engine, confidence scoring, and AI-written explanations. Next.js, TypeScript, Prisma, Neon PostgreSQL, Clerk, Groq; tested with Vitest and Playwright.",
       "Shipped Project Nova (project-nova.app) — workflow-driven case-management platform for grant-funded transitional employment, with four role-scoped experiences, 800+ tests, automated WCAG AA contrast gates, and CI quality gates with auto-merge.",
       "Co-built DreamNet on a two-person team — social dream journal with a star economy, Bayesian leaderboard, and a Three.js 3D world; built the full main app (NextAuth, Prisma 7, PostgreSQL) against an API contract agreed up front.",
-      "Built AOG Necrology — AI-assisted transcription pipeline (Python + Claude Code agents) that turned 70 years of scanned USMA memorial reports into a searchable database and static Next.js site.",
+      "Built AOG Memorial Articles — AI-assisted transcription pipeline (Python + Claude Code agents) that turned 70 years of scanned USMA memorial reports into a searchable database and static Next.js site.",
     ],
     Illustration: RobotIllustration,
   },
